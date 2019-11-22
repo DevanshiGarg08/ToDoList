@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="todo.css">
+<title>Devanshi</title>
+</head>
+<body>
+<div class="div1">
+<h1>TO-DO LIST:</h1>
+<input type='text' placeholder='Enter text here' id='textbox'/>
+</div>
+<br>
+<input type='button' value='Add' id='btn'/><br><br>
+<table border="0" id='t'>
+<tr>
+<td>
+<ul id='list'></ul>
+</td>
+</tr>
+<table>
+<script>
+	var a = document.getElementById('textbox')
+	console.log(a)
+	var b = document.getElementById('btn')
+	console.log(b)
+	b.addEventListener('click',onClick)
+	function onClick()
+	{
+	var d=document.createElement('li')
+	console.log(d)
+	d.textContent=a.value
+	var del=document.createElement('button')
+	del.innerHTML="Delete"
+	del.setAttribute("id","delete")
+	var c=document.getElementById('list')
+	c.appendChild(d)
+	 c.appendChild(del)
+	 var e=document.getElementById('t')
+	 e.appendChild(c)
+	}
+</script>
+</body>
+</html>
